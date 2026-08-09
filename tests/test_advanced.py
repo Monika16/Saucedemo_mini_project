@@ -13,7 +13,7 @@ def test_frame(page:Page):
     page.goto("https://practice-automation.com/iframes/")
     page.wait_for_timeout(2000)
     target_frame= page.frame(name="top-iframe")
-    target_frame.get_by_role("button", name="Search (Command+K)").click()
+    target_frame.get_by_role("button", name="Search").click()
     search_box = target_frame.get_by_role("searchbox", name="Search")
     search_box.fill("dialogs")
     target_frame.wait_for_timeout(2000)
