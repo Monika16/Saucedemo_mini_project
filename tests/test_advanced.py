@@ -23,7 +23,7 @@ def test_frame(page:Page):
     assert "Dialogs" in header
 
 def test_multiple_windows(playwright:Playwright):
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch()
     context = browser.new_context()
     first_page = context.new_page()
 
